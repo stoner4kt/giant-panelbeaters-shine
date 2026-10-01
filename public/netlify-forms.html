@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Netlify form detection</title>
+  <meta name="robots" content="noindex" />
+</head>
+<body>
+  <!--
+    Static form so Netlify can detect and register the "contact" form at deploy time.
+    The live form lives in the homepage HTML; fields here must match.
+  -->
+  <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" netlify hidden>
+    <input type="hidden" name="form-name" value="contact" />
+    <input name="bot-field" />
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <input type="tel" name="phone" />
+    <textarea name="message"></textarea>
+  </form>
+</body>
+</html>
