@@ -302,6 +302,79 @@ main { position: relative; z-index: 10; padding: 0 1rem; }
 }
 .link-accent:hover { color: #d94521; }
 
+/* Contact form */
+.contact { margin-top: 1.25rem; }
+.contact-form { margin-top: 1.5rem; }
+.form-honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 1.25rem;
+}
+.form-field {
+  display: grid;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(11, 37, 69, 0.75);
+}
+.form-field-full { grid-column: 1 / -1; }
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 0.85rem;
+  border: 1px solid rgba(11, 37, 69, 0.12);
+  background: rgba(255, 255, 255, 0.7);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--brand);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: rgba(11, 37, 69, 0.4);
+  font-weight: 400;
+}
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: rgba(240, 83, 43, 0.45);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(240, 83, 43, 0.15);
+}
+.form-field textarea { resize: vertical; min-height: 8rem; }
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.5rem;
+  margin-top: 1.35rem;
+}
+.form-actions .btn { border: 0; cursor: pointer; font-family: var(--font-body); }
+.form-note {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(11, 37, 69, 0.55);
+}
+.form-note a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+.form-note a:hover { color: #d94521; }
+
 /* Footer */
 .site-footer { position: relative; z-index: 10; padding: 0 1rem 5.5rem; }
 .footer-panel {
@@ -369,7 +442,7 @@ main { position: relative; z-index: 10; padding: 0 1rem; }
   .hero { grid-template-columns: 1fr; }
   .hero-media { order: -1; }
   .hero-media img { aspect-ratio: 16 / 10; }
-  .service-grid, .work-grid { grid-template-columns: 1fr; }
+  .service-grid, .work-grid, .form-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-map { min-height: 18rem; }
 }
