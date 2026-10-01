@@ -81,6 +81,7 @@ export const SITE_HTML = `<!DOCTYPE html>
         <a href="#services">Services</a>
         <a href="#work">Our Work</a>
         <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
         <a href="#location">Find Us</a>
       </div>
       <div class="nav-actions">
@@ -172,6 +173,54 @@ export const SITE_HTML = `<!DOCTYPE html>
         </div>
         <p class="review-note">These are the themes customers mention most often &mdash; see all 114 reviews on Google.</p>
         <a class="link-accent" href="https://maps.app.goo.gl/sLNU3uyHQmXHmebx9" target="_blank" rel="noopener" data-cta="reviews-google">Read our reviews on Google &rarr;</a>
+      </div>
+    </section>
+
+    <section id="contact" class="contact reveal">
+      <div class="panel glass">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Get in touch</p>
+            <h2>Request a free quote</h2>
+          </div>
+          <span class="section-note">We reply promptly</span>
+        </div>
+        <form
+          class="contact-form"
+          name="contact"
+          method="POST"
+          action="/thank-you"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          netlify
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <p class="form-honeypot" aria-hidden="true">
+            <label>Don&rsquo;t fill this out if you&rsquo;re human: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+          </p>
+          <div class="form-grid">
+            <label class="form-field">
+              <span>Name</span>
+              <input type="text" name="name" required autocomplete="name" placeholder="Your full name" />
+            </label>
+            <label class="form-field">
+              <span>Email</span>
+              <input type="email" name="email" required autocomplete="email" placeholder="you@example.com" />
+            </label>
+            <label class="form-field">
+              <span>Phone</span>
+              <input type="tel" name="phone" autocomplete="tel" placeholder="011 000 0000" />
+            </label>
+            <label class="form-field form-field-full">
+              <span>Message</span>
+              <textarea name="message" required rows="5" placeholder="Describe the damage, vehicle make/model, or ask a question&hellip;"></textarea>
+            </label>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-accent" type="submit" data-cta="form-submit">Send message</button>
+            <p class="form-note">Or call us on <a href="tel:+27118261117">011 826 1117</a></p>
+          </div>
+        </form>
       </div>
     </section>
   </main>
